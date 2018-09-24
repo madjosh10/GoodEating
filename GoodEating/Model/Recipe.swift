@@ -1,15 +1,16 @@
 //
-//  FoodCategory.swift
+//  Recipe.swift
 //  GoodEating
 //
-//  Created by Joshua Madrigal on 9/23/18.
+//  Created by Joshua Madrigal on 9/24/18.
 //  Copyright © 2018 Joshua Madrigal. All rights reserved.
 //
 
 import Foundation
 
-struct FoodCategory {
-    var title: String
-    var imageName: String
+struct Recipe {
     
+    var title: String
+    var instructions: String
+    var imageName: String
 }
