@@ -20,6 +20,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hpe-Vi-NDg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="517"/>
                                 <color key="backgroundColor" red="0.92042505741119385" green="0.56147569417953491" blue="0.074760608375072479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.92042505740000002" green="0.56147569419999999" blue="0.074760608379999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.92042505740000002" green="0.56147569419999999" blue="0.074760608379999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="200" id="CUp-bE-dKW" customClass="CategoryCell" customModule="GoodEating" customModuleProvider="target">
@@ -39,6 +40,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.92042505741119385" green="0.56147569417953491" blue="0.074760608375072479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="tmA-MZ-SeB" secondAttribute="trailing" constant="8" id="3RT-Dj-706"/>
                                                 <constraint firstAttribute="trailing" secondItem="LqX-qq-V9i" secondAttribute="trailing" constant="20" id="Qxm-t8-8FY"/>
@@ -58,6 +60,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" red="0.92042505740000002" green="0.56147569419999999" blue="0.074760608379999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hpe-Vi-NDg" secondAttribute="trailing" id="ILa-3u-f1C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hpe-Vi-NDg" secondAttribute="bottom" id="JCP-yg-xeM"/>
@@ -66,7 +69,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Categories" prompt="GoodEating" id="ARM-qU-3h0"/>
+                    <navigationItem key="navigationItem" title="Categories" prompt="GoodEating" id="ARM-qU-3h0">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="LWP-p7-b6O"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Hpe-Vi-NDg" id="u68-jr-7dG"/>
                         <segue destination="J5C-ws-1lH" kind="show" identifier="toRecipesSelection" id="xi6-yb-Jjr"/>
@@ -76,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="944.79999999999995" y="133.5832083958021"/>
         </scene>
-        <!--Recipes SelectionVC-->
+        <!--Dish-->
         <scene sceneID="epF-N8-GRi">
             <objects>
-                <viewController id="J5C-ws-1lH" customClass="RecipesSelectionVC" customModule="GoodEating" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dish" id="J5C-ws-1lH" customClass="RecipesSelectionVC" customModule="GoodEating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9bN-gG-bHd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,7 +136,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="kU2-e9-DLc" id="FQT-pU-Wer"/>
-                        <segue destination="rD9-qr-gQx" kind="show" identifier="toRecipe" id="I5d-Bb-jFf"/>
+                        <segue destination="rD9-qr-gQx" kind="show" identifier="toRecipeDetail" id="I5d-Bb-jFf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKX-J7-hXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -150,6 +155,9 @@
                         <color key="barTintColor" red="0.95817886451779288" green="0.58556583806692231" blue="0.080061762628324956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Pb-uU-Par">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uPq-UX-Bto"/>
                     </connections>
@@ -158,23 +166,59 @@
             </objects>
             <point key="canvasLocation" x="129" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe-->
         <scene sceneID="EqI-vh-WrO">
             <objects>
-                <viewController id="rD9-qr-gQx" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0k-vC-TPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Recipe" id="rD9-qr-gQx" customClass="RecipeDetailVC" customModule="GoodEating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GtU-TT-JAa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza5" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-z2-KVZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="SfR-E4-20B"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spinach Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KH-GD-h5X">
+                                <rect key="frame" x="117" y="259" width="141.5" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYC-Hq-b2p">
+                                <rect key="frame" x="20" y="306" width="335" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92042505740000002" green="0.56147569419999999" blue="0.074760608379999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rYC-Hq-b2p" firstAttribute="leading" secondItem="6sk-CR-7dp" secondAttribute="leading" constant="20" id="PUE-5h-WzG"/>
+                            <constraint firstItem="6sk-CR-7dp" firstAttribute="trailing" secondItem="rYC-Hq-b2p" secondAttribute="trailing" constant="20" id="R8b-2a-xNu"/>
+                            <constraint firstItem="6KH-GD-h5X" firstAttribute="centerX" secondItem="GtU-TT-JAa" secondAttribute="centerX" id="RgV-An-Vi4"/>
+                            <constraint firstItem="gJK-z2-KVZ" firstAttribute="leading" secondItem="6sk-CR-7dp" secondAttribute="leading" id="TDB-Wf-11G"/>
+                            <constraint firstItem="6sk-CR-7dp" firstAttribute="trailing" secondItem="gJK-z2-KVZ" secondAttribute="trailing" id="TSm-dV-OL3"/>
+                            <constraint firstItem="6KH-GD-h5X" firstAttribute="top" secondItem="gJK-z2-KVZ" secondAttribute="bottom" constant="34" id="UrC-AZ-7Sv"/>
+                            <constraint firstItem="gJK-z2-KVZ" firstAttribute="top" secondItem="6sk-CR-7dp" secondAttribute="top" id="cD5-gR-W4p"/>
+                            <constraint firstItem="rYC-Hq-b2p" firstAttribute="top" secondItem="6KH-GD-h5X" secondAttribute="bottom" constant="18" id="y00-39-VMY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6sk-CR-7dp"/>
                     </view>
+                    <connections>
+                        <outlet property="recipeDetailImage" destination="gJK-z2-KVZ" id="Ksu-CM-zT2"/>
+                        <outlet property="recipeDetailTitle" destination="6KH-GD-h5X" id="7Ta-RA-7qq"/>
+                        <outlet property="recipeInstructions" destination="rYC-Hq-b2p" id="gyd-mv-3w3"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V0k-vC-TPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2694" y="134"/>
         </scene>
     </scenes>
     <resources>
         <image name="burger6" width="966" height="725"/>
+        <image name="pizza5" width="1050" height="701"/>
     </resources>
 </document>
