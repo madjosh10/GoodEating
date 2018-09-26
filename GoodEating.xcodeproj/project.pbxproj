@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		552A9321215B13A5002B3725 /* RecipesSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A9320215B13A5002B3725 /* RecipesSelectionVC.swift */; };
+		552A9323215B2046002B3725 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A9322215B2046002B3725 /* RecipeCell.swift */; };
 		55485AF421584301003BD93F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55485AF321584301003BD93F /* AppDelegate.swift */; };
 		55485AF621584301003BD93F /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55485AF521584301003BD93F /* HomeVC.swift */; };
 		55485AF921584301003BD93F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55485AF721584301003BD93F /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		552A9320215B13A5002B3725 /* RecipesSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesSelectionVC.swift; sourceTree = "<group>"; };
+		552A9322215B2046002B3725 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		55485AF021584301003BD93F /* GoodEating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodEating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55485AF321584301003BD93F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55485AF521584301003BD93F /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				55485B30215955F8003BD93F /* CategoryCell.swift */,
+				552A9322215B2046002B3725 /* RecipeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				55485AF621584301003BD93F /* HomeVC.swift in Sources */,
 				55485B0D21593D2A003BD93F /* DataSet.swift in Sources */,
 				55485B0921584383003BD93F /* FoodCategory.swift in Sources */,
+				552A9323215B2046002B3725 /* RecipeCell.swift in Sources */,
 				55485AF421584301003BD93F /* AppDelegate.swift in Sources */,
 				552A9321215B13A5002B3725 /* RecipesSelectionVC.swift in Sources */,
 				55485B0B21593CF3003BD93F /* Recipe.swift in Sources */,
