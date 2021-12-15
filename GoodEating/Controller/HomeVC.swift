@@ -53,6 +53,4 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     }
     
-    
-
 } // end HomeVC Class
